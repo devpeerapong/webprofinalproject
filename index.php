@@ -1,3 +1,8 @@
+<?php
+  session_start();
+
+  echo $_SESSION["flash_message"];
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
