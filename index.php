@@ -1,8 +1,5 @@
-<?php
-  session_start();
+<?php session_start(); ?>
 
-  echo $_SESSION["flash_message"];
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,8 +18,13 @@
     <br>
     <br>
     <br>
-    <br>
     <div class="container">
+      <?php if ( isset($_SESSION["flash_message"]) ): ?>
+        <div class="alert alert-danger">
+          <strong><?php echo $_SESSION["flash_message"] ?></strong>
+        </div>
+        <br>
+      <?php endif; ?>
       <div class="col-md-4 col-md-offset-8">
         <form action="/api/signin.php" class="form" method="POST">
           <div class="form-group">
