@@ -8,4 +8,8 @@
 
   echo $username;
   echo $password;
+
+  if($username == "" || $password == "") {
+    header("Location: /");
+  }
 ?>
