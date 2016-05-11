@@ -1,4 +1,13 @@
-<?php session_start(); ?>
+<?php
+  require_once("config.php");
+
+  session_start();
+
+  $mysqli = new mysqli(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+  if ($mysqli->connect_error) {
+    die();
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -13,7 +13,7 @@
   echo $password;
 
   if($username == "" || $password == "") {
-    $_SESSION["flash_message"] = "The username or password can not be empty.";
+    $_SESSION["flash_message"] = "The username or password can not be empty."
     header("Location: /");
   }
 ?>
