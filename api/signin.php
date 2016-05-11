@@ -17,7 +17,7 @@
     header("Location: /");
   }
 
-  require_once("config.php");
+  require_once("../config.php");
 
   $mysqli = new mysqli(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
   if ($mysqli->connect_error) {
